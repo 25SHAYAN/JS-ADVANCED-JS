@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADVANCED </title>
+</head>
+<body>
+    <center>
+        <h1>CLOUSER FUNCTION</h1>
+        <p>Closure function(still confused concept):
+            Closure means that an inner function always has acess to the vars and parameters of its outer function.
+        </p>
+    </center>
+    <hr><script>
+        //callback function
+       // setInterval(()=>{},1000);
+       // array.forEach(element =>{});
+
+       //EXAMPLE 1
+        //closure function
+       function OuterFunction(){
+         let outerVariable = 100;//can use var,let
+
+         function Innerfunction(){
+            document.write("<b>Innerfunction:</b>" + outerVariable + "<br></br>");
+         }
+         Innerfunction();
+       }
+       OuterFunction();
+
+       //EXAMPLE 2
+       function counter1(){
+         let counter =0;
+
+
+         function IncreaseCounter(){
+            return counter +=1;
+         }
+        return IncreaseCounter();
+         
+       }
+       var count = counter1();
+      document.write(counter1());
+      // document.write(counter1());
+     // document.write("<b>This is counter1 function:</b>" +count+"<br><br>");
+      //document.write("<b>This is counter1 function:</b>" +count+"<br><br>");
+    </script>
+</body>
+</html>

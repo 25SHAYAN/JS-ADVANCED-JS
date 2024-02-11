@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADVANCED</title>
+</head>
+<body>
+    <center>
+        <h2>ANONYMOUS CALLBACKS FUNCTIONS OR <b>IMMIDIATE EXECUTION</b> OF A A FUNCTION</h2>
+    </center>
+    <hr>
+    <h2>JAVASCRIPT FUNCTIONS</h2>
+    <p>1)Local Function = function A(){}</p>
+    <p>2)Expression Function = let A=function(){}</p>
+    <p>3)Arrow Function = let A()=>{}</p>
+     <p>4)CallBack Function  = forEach(function(){});</p>
+     <p>5)Closure Function = function A(){function B(){} B();}</p>
+     <p>6)Anonymous Function or IMMIDIATE EXECUTION OF A A FUNCTION = ()();</p>
+     <!-- 1st()for fun declear  ,2nd () for fun calling-->
+     <script>
+       //self constructor
+       //refresh onload
+        //self triggering function
+
+       //default function
+       //example 1
+       (function(){
+        alert("hai anonymous");
+       })();
+
+       //example 2
+       ((a,b)=>{
+        document.write(a);
+        document.write(b);
+       })(10,29);
+
+       //example 3
+        /*((a,b)=>{
+            return a+b;
+        })();*/ //doesnt give return output
+
+     </script>
+</body>
+</html>

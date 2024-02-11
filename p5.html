@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADVANCED</title>
+</head>
+<body>
+    <center>
+        <h1>Generator functions</h1>
+    </center>
+    <h2>JAVASCRIPT FUNCTIONS</h2>
+    <p>1)Local Function = function A(){}</p>
+    <p>2)Expression Function = let A=function(){}</p>
+    <p>3)Arrow Function = let A()=>{}</p>
+     <p>4)CallBack Function  = forEach(function(){});</p>
+     <p>5)Closure Function = function A(){function B(){} B();}</p>
+     <p>6)Anonymous Function or IMMIDIATE EXECUTION OF A A FUNCTION = ()();</p>
+     <p>7)Lambda function = A = {x} => 100 + x;</p>
+     <p>8)Generator Functions = function* A(){yield "A",yield "B"}</p>
+     <hr>
+     <h1>by using return</h1>
+<script>
+    function A(){
+        let a=10,b=20,sum;
+        sum = a+b;
+        return sum;//return will stop next execution so we wont get result
+        //return a;//it wont print js supports only one return keyword
+        console.log(sum);
+
+    }
+   // A();
+   //we use doc.write to get result
+   document.write(A());
+</script>
+<hr>
+<h1>by using generator function</h1>
+<script>
+ function* users(){
+//here we use yeild which is a akind of return keyword
+//return x returns the value of x,but yeild x returns a function
+yield "Rama";
+yield "Laxhmana";
+yield "Sita";
+yield "Anjaneya";
+yield "Venkatesha";
+ }
+ console.log("Users Function =",users());
+ console.log("USERS TYPEOF", typeof(users()));
+
+//we use for of to display result
+for (let item of users()) {
+    document.write(`<h3>${item}</h3>`);
+    
+}
+</script>
+</body>
+</html>

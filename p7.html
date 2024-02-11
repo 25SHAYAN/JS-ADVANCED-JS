@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADVANCED</title>
+</head>
+<body>
+    <center>
+        <h1>addEventListener</h1>
+    </center>
+    <hr>
+    <button type=" button" id="myBtn">Click Me</button>
+    <script>
+        //selecting button element
+        var btn = document.getElementById("myBtn");
+
+        //defining custom functions
+        function sayhello(){
+            alert("Hi,how are you doing?");
+        }
+        //sayhello();
+
+        function sethovercolor(){
+            btn.style.background = "black";
+            btn.style.color = "purple";
+        }
+        //sethovercolor();
+
+        function setnormalcolor(){
+            btn.style.background = "";//null
+        }
+        //setnormalcolor();
+        
+        btn.addEventListener('click',sayhello);
+        btn.addEventListener('mouseover',sethovercolor);
+        btn.addEventListener('mouseleave',setnormalcolor);
+
+        //btn.addEventListener('click mouseleave',sayhello);it is not work we cant use more than one event
+    </script>
+</body>
+</html>

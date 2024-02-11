@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced</title>
+</head>
+<body>
+    <center>
+        <h1>set constructor</h1>
+    </center>
+    <hr>
+    <script>
+        let emp = new Set();
+        emp.add("ram");
+        emp.add("sugriva");
+        emp.add("jatayu");
+        emp.add("angad");     
+        emp.add("angad");//takes only one time
+
+        console.log(emp.entries());
+        emp.forEach(function(item){
+            document.write(`<h3>${item}</h3>`)
+        });
+
+        /*has()*/
+        console.log("has('ram') =", emp.has('ram'));//true
+        console.log("has('ram') =", emp.has('Ram'));//case sensitive
+        console.log("has('sita') =", emp.has('sita'));//false
+
+        emp.delete("angad");//delete set
+
+        console.log('after delete = ',emp.entries());
+        console.log("has('angad') =", emp.has('angad'));
+    </script>
+</body>
+</html>
